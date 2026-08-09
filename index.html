@@ -111,7 +111,7 @@
   <!-- Search YouTube Topics -->
   <div class="search-box">
     <input type="text" id="queryInput" placeholder="Search any educational topic (e.g., Python OOP, Quantum Physics)..." onkeydown="if(event.key==='Enter') searchYouTube()" />
-    <button onclick="searchYouTube()">🔍 Search</button>
+    <button onclick="searchYouTube()"> Search</button>
   </div>
 
   <div class="container">
@@ -143,6 +143,14 @@
   </div>
 
   <script>
+    // Backend URL for API calls
+    const RENDER_BACKEND_URL = "https://ai-video-summrizer.onrender.com"; 
+
+    // Determine API base URL based on environment
+    const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') 
+      ? '' 
+      : RENDER_BACKEND_URL;
+
     let currentVideoId = '';
     let currentVideoTitle = '';
     let summaryData = null;
@@ -200,7 +208,7 @@
     // Summarize Video via Gemini
     async function summarizeVideo() {
       const out = document.getElementById('output');
-      out.innerHTML = '<p>⏳ Fetching transcript and generating study notes with Gemini...</p>';
+      out.innerHTML = '<p> Fetching transcript and generating study notes with Gemini...</p>';
 
       try {
         const res = await fetch('/api/summarize', {
@@ -213,9 +221,9 @@
         if (result.success) {
           summaryData = result.data;
           out.innerHTML = `
-            <h3>📌 Purpose</h3><p>${summaryData.purpose}</p>
-            <h3>📝 Summary</h3><p>${summaryData.summary}</p>
-            <h3>💡 Key Takeaways</h3>
+            <h3> Purpose</h3><p>${summaryData.purpose}</p>
+            <h3> Summary</h3><p>${summaryData.summary}</p>
+            <h3> Key Takeaways</h3>
             <ul>${summaryData.keyPoints.map(p => `<li>${p}</li>`).join('')}</ul>
           `;
           document.getElementById('pdfBtn').style.display = 'inline-block';
