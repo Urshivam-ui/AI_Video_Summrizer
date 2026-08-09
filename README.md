@@ -1,10 +1,10 @@
-# 🧠 AI StudyHub — YouTube Video Summarizer & Study Assistant
+# AI StudyHub — YouTube Video Summarizer & Study Assistant
 
 > Turn any YouTube video into concise executive summaries, timestamped chapters, interactive quizzes, flashcards, and a live Q&A chatbot in seconds.
 
 ---
 
-## 🌟 Why I Built This
+## Why I Built This
 
 We've all been there: staring at a massive 2-hour YouTube tutorial or lecture, scrubbing through the timeline just to find the key takeaways. 
 
@@ -12,18 +12,18 @@ We've all been there: staring at a massive 2-hour YouTube tutorial or lecture, s
 
 ---
 
-## ✨ Features At A Glance
+## Features At A Glance
 
-- 🎥 **Smart Video Search & Extraction:** Paste any YouTube link/ID, or search directly from the app.
-- 📝 **Executive Summaries & Chapters:** Get the core objective, main key points, and clickable timestamped chapters.
-- 🎴 **Interactive Flashcards:** Flip cards to test your retention on key concepts.
-- ❓ **Auto-Generated Quizzes:** Test your knowledge with multiple-choice questions complete with instant feedback and explanations.
-- 💬 **Ask Video Assistant:** Chat directly with an AI that knows the exact transcript of the video to answer your specific questions.
-- 📄 **Export to PDF:** Download your generated study notes for offline revision.
+- **Smart Video Search & Extraction:** Paste any YouTube link/ID, or search directly from the app.
+- **Executive Summaries & Chapters:** Get the core objective, main key points, and clickable timestamped chapters.
+- **Interactive Flashcards:** Flip cards to test your retention on key concepts.
+- **Auto-Generated Quizzes:** Test your knowledge with multiple-choice questions complete with instant feedback and explanations.
+- **Ask Video Assistant:** Chat directly with an AI that knows the exact transcript of the video to answer your specific questions.
+- **Export to PDF:** Download your generated study notes for offline revision.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend:** Node.js, Express.js
 - **AI Model:** Google Gemini API (`@google/genai`)
@@ -33,9 +33,9 @@ We've all been there: staring at a massive 2-hour YouTube tutorial or lecture, s
 
 ---
 
-## 🚀 Quick Start (Run Locally)
+## Quick Start (Run Locally)
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/YOUR_GITHUB_USERNAME/ai_video_summrizer.git](https://github.com/YOUR_GITHUB_USERNAME/ai_video_summrizer.git)
-cd ai_video_summrizer
+git clone "https://github.com/Urshivam-ui/AI_Video_Summrizer.git"
+cd AI_Video_Summrizer
