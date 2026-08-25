@@ -466,6 +466,11 @@ app.post('/api/generate-pdf', (req, res) => {
   }
 });
 
+// Explicit root route handler for frontend serving (Fixes Vercel Cannot GET / error)
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
+
 // Express Error Handler
 app.use((err, req, res, next) => {
   console.error('Express Internal Error:', err.stack);
